@@ -5,6 +5,18 @@ let score = 20;
 let highscore = 0;
 
 document.querySelector(".again").style.display = "none";
+document.querySelector(".dialog").style.display = "none";
+
+let count = 0;
+document.querySelector(".help").addEventListener("click", function () {
+	if(count === 0) {
+		count = 1;
+		document.querySelector(".dialog").style.display = "";	
+	} else {
+		document.querySelector(".dialog").style.display = "none";
+		count = 0;
+	}
+});
 
 const displayMessage = function (message) {
   document.querySelector(".message").textContent = message;
