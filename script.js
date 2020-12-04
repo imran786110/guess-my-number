@@ -11,7 +11,7 @@ let count = 0;
 document.querySelector(".help").addEventListener("click", function () {
 	if(count === 0) {
 		count = 1;
-		document.querySelector(".dialog").style.display = "";	
+		document.querySelector(".dialog").style.display = "block";	
 	} else {
 		document.querySelector(".dialog").style.display = "none";
 		count = 0;
@@ -33,7 +33,7 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
     document.querySelector(".number").textContent = number;
-    document.querySelector(".again").style.display = "";
+    document.querySelector(".again").style.display = "block";
 
     if (score > highscore) {
       highscore = score;
@@ -49,7 +49,7 @@ document.querySelector(".check").addEventListener("click", function () {
     } else {
       displayMessage("💥 You lost the game");
       document.querySelector(".score").textContent = 0;
-      document.querySelector(".again").style.display = "";
+      document.querySelector(".again").style.display = "block";
     }
   }
 });
